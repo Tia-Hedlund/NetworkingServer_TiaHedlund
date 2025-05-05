@@ -7,7 +7,7 @@ public class NetworkingServer {
         ServerSocket server = null;
         Socket client;
 
-        int portnumber = 1201;
+        int portnumber = 53003;
         if ( args.length >= 1){
             portnumber = Integer.parseInt(args[0]);
         }
@@ -35,7 +35,6 @@ public class NetworkingServer {
 
                 String msgFromClient = br.readLine();
                 System.out.println("Message recieved from client = " + msgFromClient);
-
 
                 if (msgFromClient != null && !msgFromClient.equalsIgnoreCase("bye")) {
                     OutputStream clientOut = client.getOutputStream();
